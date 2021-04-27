@@ -1,0 +1,41 @@
+body {
+    background-color: #D5CFE1;
+}
+
+.card-img {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar {
+    font-size: 1.2rem;
+}
+
+#navigation .nav-link {
+    color: #f5f3f4;
+}
+
+.navbar .container-md a:hover {
+    color: #18020C;
+}
+
+#navigation .nav-link:hover {
+    color: #634B66;
+}
+
+.profileImg {
+    border: thick double #f5f3f4;
+    border-radius: 50%;
+}
+
+p a {
+    color: darkgray;
+}
