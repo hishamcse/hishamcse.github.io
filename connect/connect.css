@@ -25,6 +25,10 @@ body {
     color: #0077b6;
 }
 
+.col-6 a:hover {
+    color: #18020C;
+}
+
 .col-4 .bi.bi-linkedin {
     color: #0077b6;
 }
@@ -35,6 +39,19 @@ body {
 
 .col-4 .bi.bi-youtube {
     color: #e63946;
+}
+
+.bi.bi-github:hover,
+.bi.bi-linkedin:hover,
+.bi.bi-facebook:hover,
+.bi.bi-youtube:hover {
+    transform: scale(1.1, 1.1);
+    transition: all 0.5s;
+}
+
+img:hover {
+    transform: scale(1.1, 1.1);
+    transition: all 0.5s;
 }
 
 p a {
