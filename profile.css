@@ -6,8 +6,8 @@ body {
 }
 
 .card-img {
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
 
     height: 100vh;
 
@@ -16,6 +16,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+.card-img-overlay .card-body h1 {
+    font-weight: bold;
 }
 
 .navbar {
@@ -42,4 +46,3 @@ body {
 p a {
     color: darkgray;
 }
-

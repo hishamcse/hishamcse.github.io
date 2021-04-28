@@ -20,22 +20,22 @@ body {
     color: #634B66;
 }
 
+.col-6 a {
+    color: #0077b6;
+}
+
+.col-4 .bi.bi-linkedin {
+    color: #0077b6;
+}
+
+.col-4 .bi.bi-facebook {
+    color: #023e8a;
+}
+
+.col-4 .bi.bi-youtube {
+    color: #e63946;
+}
+
 p a {
     color: darkgray;
-}
-
-.card-footer h5 a {
-    color: #2d6a4f;
-}
-
-.card-footer h5 a:hover {
-    color: black;
-}
-
-.card {
-    transition: all 0.5s;
-}
-
-.card:hover {
-    transform: scale(1.05, 1.05);
 }
