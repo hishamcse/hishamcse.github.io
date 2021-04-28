@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body{
+    /*background-color: #D5CFE1;*/
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar {
+    font-size: 1.2rem;
+}
+
+#navigation .nav-link {
+    color: #f5f3f4;
+}
+
+.navbar .container-md a:hover {
+    color: #18020C;
+}
+
+#navigation .nav-link:hover {
+    color: #634B66;
+}
+
+p a {
+    color: darkgray;
+}
