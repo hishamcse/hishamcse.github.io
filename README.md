@@ -2,5 +2,5 @@
  
 My personal static website.<br />
 
-Language: HTML, CSS
+Language: HTML, CSS <br />
 Framework: Bootstrap
