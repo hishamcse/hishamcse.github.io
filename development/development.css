@@ -40,3 +40,11 @@ p a {
 .card:hover {
     transform: scale(1.05, 1.05);
 }
+
+.bi.bi-github:hover,
+.bi.bi-linkedin:hover,
+.bi.bi-facebook:hover,
+.bi.bi-youtube:hover {
+    transform: scale(1.1, 1.1);
+    transition: all 0.5s;
+}
