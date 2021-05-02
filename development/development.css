@@ -41,6 +41,15 @@ p a {
     transform: scale(1.05, 1.05);
 }
 
+.row {
+    transition: transform 1s, opacity 1s;
+}
+
+.row--hidden {
+    opacity: 0;
+    transform: translateY(5rem);
+}
+
 .bi.bi-github:hover,
 .bi.bi-linkedin:hover,
 .bi.bi-facebook:hover,
