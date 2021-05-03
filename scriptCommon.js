@@ -40,3 +40,16 @@ sections.forEach(section => {
     section.classList.add('row--hidden');
     revealObserver.observe(section);
 });
+
+/*--------------------- Reveal Connect Link on hover -------------------*/
+
+const footer_link = document.querySelector('.footer__link');
+
+document.querySelector('.footer__p').addEventListener('mouseover', e => {
+    if (e.target.classList.contains('bi')) {
+        footer_link.classList.remove('hidden');
+        footer_link.textContent = e.target.closest('a').getAttribute('href');
+    } else {
+        footer_link.classList.add('hidden');
+    }
+});

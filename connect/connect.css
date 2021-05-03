@@ -66,3 +66,7 @@ img:hover {
 p a {
     color: darkgray;
 }
+
+.hidden{
+    opacity: 0;
+}
