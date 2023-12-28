@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar {
+    font-size: 1.2rem;
+}
+
+#navigation .nav-link {
+    color: #f5f3f4;
+}
+
+.navbar .container-md a:hover {
+    color: #18020C;
+    text-decoration: underline;
+}
+
+#navigation .nav-link:hover {
+    color: #18020C;
+}
+
+p a {
+    color: darkgray;
+}
+
+.card-footer h5 a {
+    color: #2d6a4f;
+}
+
+.card-footer h5 a:hover {
+    color: black;
+}
+
+.card {
+    transition: all 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.row {
+    transition: transform 1s, opacity 1s;
+}
+
+.row--hidden {
+    opacity: 0;
+    transform: translateY(5rem);
+}
+
+.bi.bi-github:hover,
+.bi.bi-linkedin:hover,
+.bi.bi-facebook:hover,
+.bi.bi-youtube:hover {
+    transform: scale(1.1, 1.1);
+    transition: all 0.5s;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+img {
+    opacity: 0.8;
+    backface-visibility: hidden;
+}
