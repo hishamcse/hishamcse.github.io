@@ -410,6 +410,46 @@ a:hover { color: #fff; }
 
 .skill-chip img { width: 20px; height: 20px; object-fit: contain; }
 
+
+/* ─── 3D BACKGROUND CANVAS (subpages) ─── */
+#bg-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ─── Z-INDEX STACK: canvas(0) → sections(1) → cards(2) → links(3) ─── */
+.nav, .page-header, .section, .footer,
+.stats-section, .quicklinks-section, .profile-section {
+  position: relative;
+  z-index: 1;
+}
+
+.card,
+.other-card,
+.ql-card,
+.connect-card,
+.exp-card,
+.pub-card,
+.timeline-item,
+.skill-group {
+  position: relative;
+  z-index: 2;
+}
+
+a, button, .btn, .icon-link, .badge,
+.proj-footer, .proj-body,
+.exp-footer, .exp-body,
+.pub-body,
+.other-card,
+.connect-card {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
 /* ─── NOISE OVERLAY ─── */
 body::after {
   content: '';
