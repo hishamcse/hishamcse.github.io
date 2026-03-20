@@ -50,3 +50,27 @@ document.querySelectorAll('.nav-links a').forEach(a => {
     a.classList.add('active');
   }
 });
+
+// ─── SCROLL PROGRESS BAR ───
+(function() {
+  const bar = document.createElement('div');
+  bar.style.cssText = `
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #4f8ef7, #7c3aed);
+    z-index: 9998;
+    transition: width 0.1s linear;
+    pointer-events: none;
+    border-radius: 0 2px 2px 0;
+  `;
+  document.body.appendChild(bar);
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+})();

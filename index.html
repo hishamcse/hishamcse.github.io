@@ -107,6 +107,19 @@
       animation: scrollPulse 2s ease-in-out infinite;
     }
 
+    .typed-cursor {
+      display: inline-block;
+      color: var(--accent);
+      animation: cursorBlink 0.75s step-end infinite;
+      font-weight: 300;
+      margin-left: 1px;
+    }
+
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
     @keyframes scrollPulse {
       0%, 100% { opacity: 0.3; }
       50% { opacity: 1; }
@@ -387,8 +400,7 @@
   <div class="hero-inner">
     <p class="hero-greeting">As-Salamu ʿAlaykum Warahmatullah</p>
     <h1 class="hero-name">Syed Jarullah<br><em>Hisham</em></h1>
-    <p class="hero-tagline">Software Engineer · IQVIA · MSc Student @ BUET<br>Building intelligent systems at the intersection of software & AI</p>
-    <div class="hero-cta">
+    <p class="hero-tagline"><span id="typed-line"></span><span class="typed-cursor">|</span><br>Building intelligent systems at the intersection of software & AI</p>    <div class="hero-cta">
       <a href="https://hishamcse.github.io/projects" class="btn btn-primary">View Projects</a>
       <a href="https://hishamcse.github.io/cv/Syed_Jarullah_Hisham.pdf" class="btn btn-outline" target="_blank">Download CV</a>
     </div>
@@ -451,20 +463,45 @@
 <div class="stats-section">
   <div class="stats-grid">
     <div class="reveal">
-      <div class="stat-num">5+</div>
-      <div class="stat-label">Years Coding</div>
+      <div class="stat-num">2</div>
+      <div class="stat-label">Years Experience</div>
     </div>
     <div class="reveal delay-1">
-      <div class="stat-num">11+</div>
-      <div class="stat-label">Projects</div>
+      <div class="stat-num">6+</div>
+      <div class="stat-label">Years Coding</div>
     </div>
     <div class="reveal delay-2">
+      <div class="stat-num">15+</div>
+      <div class="stat-label">Projects</div>
+    </div>
+    <div class="reveal delay-3">
       <div class="stat-num">1</div>
       <div class="stat-label">IEEE Publication</div>
     </div>
-    <div class="reveal delay-3">
-      <div class="stat-num">2</div>
-      <div class="stat-label">Degrees</div>
+  </div>
+</div>
+
+<!-- GITHUB STATS -->
+<div style="position:relative; z-index:1; background:var(--bg); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:3rem 2rem;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <p style="font-size:0.75rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--text-dim); margin-bottom:0.4rem;">
+      Activity</p>
+    <h2 style="font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:#fff; letter-spacing:-1px; margin-bottom:2rem;">
+      GitHub Stats</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.25rem; align-items:center;">
+      <img
+              src="https://github-readme-stats.vercel.app/api?username=hishamcse&show_icons=true&count_private=true&include_all_commits=true&theme=transparent&hide_border=true&title_color=4f8ef7&icon_color=7c3aed&text_color=8896aa&bg_color=00000000&ring_color=4f8ef7"
+              alt="GitHub Stats"
+              style="width:100%; border-radius:12px; border:1px solid var(--border);"
+              loading="lazy"
+      >
+
+      <img
+              src="https://github-readme-streak-stats.herokuapp.com?user=hishamcse&theme=transparent&hide_border=true&ring=4f8ef7&fire=7c3aed&currStreakLabel=4f8ef7&sideLabels=8896aa&dates=8896aa&stroke=1a2133"
+              alt="GitHub Streak"
+              style="width:100%; border-radius:12px; border:1px solid var(--border);"
+              loading="lazy"
+      >
     </div>
   </div>
 </div>
@@ -495,12 +532,12 @@
       <div class="ql-desc">IQVIA SDE-1 and internship at ERA-Infotech</div>
     </a>
     <a href="https://hishamcse.github.io/publication" class="ql-card reveal delay-2">
-      <div class="ql-icon">📄</div>
+      <div class="ql-icon">📜</div>
       <div class="ql-title">Publication</div>
-      <div class="ql-desc">IEEE Transactions paper on 5G security with GPT-4</div>
+      <div class="ql-desc">IEEE Transactions (TIFS) paper on 5G security with GPT-4</div>
     </a>
     <a href="https://hishamcse.github.io/connect" class="ql-card reveal delay-3">
-      <div class="ql-icon">✉️</div>
+      <div class="ql-icon">📥</div>
       <div class="ql-title">Connect</div>
       <div class="ql-desc">Email, GitHub, LinkedIn, Facebook, YouTube</div>
     </a>
@@ -644,5 +681,41 @@
 })();
 </script>
 <script src="common.js"></script>
+<script>
+  (function() {
+    const phrases = [
+      'Software Engineer · IQVIA',
+      'Backend Developer · C# & .NET',
+      'AI Agent Developer · LangGraph & MCP',
+      'Interests · Deep RL, Agentic AI & AI Integration',
+      'MSc Student · CSE BUET',
+    ];
+    const el = document.getElementById('typed-line');
+    let pi = 0, ci = 0, deleting = false;
+
+    function tick() {
+      const phrase = phrases[pi];
+      if (!deleting) {
+        el.textContent = phrase.slice(0, ++ci);
+        if (ci === phrase.length) {
+          deleting = true;
+          setTimeout(tick, 1800);
+          return;
+        }
+        setTimeout(tick, 60);
+      } else {
+        el.textContent = phrase.slice(0, --ci);
+        if (ci === 0) {
+          deleting = false;
+          pi = (pi + 1) % phrases.length;
+          setTimeout(tick, 400);
+          return;
+        }
+        setTimeout(tick, 30);
+      }
+    }
+    setTimeout(tick, 1200);
+  })();
+</script>
 </body>
 </html>
