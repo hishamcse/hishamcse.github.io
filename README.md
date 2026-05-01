@@ -86,7 +86,7 @@ hishamcse.github.io/
 ## Highlights
 
 - **IEEE Publication** — *5GPT: 5G Vulnerability Detection* in IEEE Transactions on Information Forensics and Security (Q1, IF 8.0)
-- **IQVIA** — SDE-1 working on backend systems and AI agents (.NET, Agentic AI, Python, LangGraph)
+- **IQVIA** — SDE-2 working on backend systems and AI agents (.NET, Agentic AI, Python, LangGraph)
 - **BUET** — B.Sc CSE (2019–2024), M.Sc ongoing (2024–)
 
 ---
